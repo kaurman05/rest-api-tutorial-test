@@ -1,0 +1,13 @@
+$kind: collection
+name: Auth
+variables:
+  - key: baseUrl
+    value: 'http://localhost:3600'
+  - key: email
+    value: 'john.doe@example.com'
+  - key: password
+    value: 'securePass123'
+  - key: accessToken
+    value: ''
+  - key: refreshToken
+    value: ''

@@ -1,0 +1,9 @@
+$kind: collection
+name: Users
+variables:
+  - key: baseUrl
+    value: 'http://localhost:3600'
+  - key: accessToken
+    value: ''
+  - key: userId
+    value: ''

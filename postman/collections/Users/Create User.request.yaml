@@ -1,0 +1,23 @@
+$kind: http-request
+name: Create User
+method: POST
+url: '{{baseUrl}}/users'
+order: 1000
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john.doe@example.com",
+      "password": "securePass123"
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      const response = pm.response.json();
+      pm.collectionVariables.set('userId', response.id);
+    language: text/javascript
