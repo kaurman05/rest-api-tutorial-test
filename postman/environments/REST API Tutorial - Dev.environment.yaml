@@ -1,5 +1,0 @@
-name: REST API Tutorial - Dev
-values:
-  - key: baseUrl
-    value: 'http://localhost:3600'
-    enabled: true

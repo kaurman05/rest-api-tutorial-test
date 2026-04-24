@@ -1,18 +1,16 @@
-# Use this workspace to collaborate
 workspace:
-  id: 5d3c263d-06b7-490e-a6d9-36933d049e55
-
-# Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
-
+  id: ""
 cloudResources:
   environments:
-    ../postman/environments/REST API Tutorial - Dev.environment.yaml: 8be9f609-91b7-5509-880e-642d8723751b
+    ../postman/environments/REST API Tutorial - Dev.environment.yaml: 1274384-94f999cd-1d1c-429b-98f5-62eaaeb7e6bf
   collections:
-    ../postman/collections/Auth: 47072421-83aacc74-03fe-4afc-b89a-e7272bb42725
-    ../postman/collections/Users: 47072421-42fa7d0f-afdc-4964-93ca-b0782f4a0350
-
-# All resources in the `postman/` folder are automatically registered in Local View.
-# Point to additional files outside the `postman/` folder to register them individually. Example:
-#localResources:
-#  collections:
-#    - ../tests/E2E Test Collection/
+    ../postman/collections/Auth: 1274384-f6bd3cea-cbc6-414b-8580-ee77d8cf2a78
+    ../postman/collections/Users: 1274384-a2af6d39-8d71-45c5-bc92-42e8be6fe6b5
+    ../postman/collections/REST API Tutorial: 1274384-fea4599f-759d-4a78-bd62-4b2488319f4e
+localResources:
+  collections:
+    - ../postman/collections/Auth
+    - ../postman/collections/Users
+    - ../postman/collections/REST API Tutorial
+  environments:
+    - ../postman/environments/REST API Tutorial - Dev.environment.yaml

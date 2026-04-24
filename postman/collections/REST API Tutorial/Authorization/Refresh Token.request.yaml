@@ -3,23 +3,23 @@ name: Refresh Token
 method: POST
 url: '{{baseUrl}}/auth/refresh'
 order: 2000
-auth:
-  type: bearer
-  credentials:
-    - key: token
-      value: '{{accessToken}}'
 headers:
   - key: Content-Type
     value: application/json
+  - key: Authorization
+    value: 'Bearer {{accessToken}}'
 body:
   type: json
   content: |-
     {
-      "refresh_token": "{{refreshToken}}"
+      "userId": "{{userId}}",
+      "refreshToken": "{{refreshToken}}"
     }
 scripts:
   - type: afterResponse
+    language: text/javascript
     code: |-
       const response = pm.response.json();
-      pm.collectionVariables.set('accessToken', response.id);
-    language: text/javascript
+      if (response.accessToken) {
+        pm.collectionVariables.set("accessToken", response.accessToken);
+      }

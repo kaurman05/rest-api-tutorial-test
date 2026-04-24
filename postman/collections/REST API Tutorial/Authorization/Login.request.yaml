@@ -1,0 +1,27 @@
+$kind: http-request
+name: Login
+method: POST
+url: '{{baseUrl}}/auth'
+order: 1000
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "email": "user@example.com",
+      "password": "password123",
+      "userId": "userId"
+    }
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      const response = pm.response.json();
+      if (response.accessToken) {
+        pm.collectionVariables.set("accessToken", response.accessToken);
+      }
+      if (response.refreshToken) {
+        pm.collectionVariables.set("refreshToken", response.refreshToken);
+      }

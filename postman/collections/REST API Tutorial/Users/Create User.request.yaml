@@ -13,11 +13,13 @@ body:
       "firstName": "John",
       "lastName": "Doe",
       "email": "john.doe@example.com",
-      "password": "securePass123"
+      "password": "securePassword123"
     }
 scripts:
   - type: afterResponse
+    language: text/javascript
     code: |-
       const response = pm.response.json();
-      pm.collectionVariables.set('userId', response.id);
-    language: text/javascript
+      if (response.id) {
+        pm.collectionVariables.set("userId", response.id);
+      }

@@ -1,0 +1,4 @@
+$kind: collection
+name: Authorization
+description: 'Authentication endpoints for login and token refresh. The login endpoint returns both access and refresh tokens, which are automatically saved to collection variables.'
+order: 1000

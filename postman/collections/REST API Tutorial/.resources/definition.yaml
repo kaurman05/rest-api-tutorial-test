@@ -1,0 +1,12 @@
+$kind: collection
+name: REST API Tutorial
+description: 'REST API Tutorial - A Node.js/Express API with JWT authentication, user management, and role-based access control. The API uses MongoDB for data persistence and implements three permission levels: NORMAL_USER (1), PAID_USER (4), and ADMIN (2048).'
+variables:
+  - key: baseUrl
+    value: 'http://localhost:3600'
+  - key: accessToken
+    value: 'yellow'
+  - key: refreshToken
+    value: ''
+  - key: userId
+    value: ''
