@@ -1,5 +1,8 @@
 workspace:
-  id: ""
+  id: 9c64f598-4f31-4667-a8f4-db227681fca4
+
+# Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
+
 cloudResources:
   environments:
     ../postman/environments/REST API Tutorial - Dev.environment.yaml: 1274384-94f999cd-1d1c-429b-98f5-62eaaeb7e6bf
@@ -7,6 +10,7 @@ cloudResources:
     ../postman/collections/Auth: 1274384-f6bd3cea-cbc6-414b-8580-ee77d8cf2a78
     ../postman/collections/Users: 1274384-a2af6d39-8d71-45c5-bc92-42e8be6fe6b5
     ../postman/collections/REST API Tutorial: 1274384-fea4599f-759d-4a78-bd62-4b2488319f4e
+
 localResources:
   collections:
     - ../postman/collections/Auth
