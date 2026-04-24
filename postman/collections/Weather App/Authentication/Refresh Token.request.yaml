@@ -1,0 +1,10 @@
+$kind: http-request
+description: "Generated from cURL: curl -X POST '{{baseUrl}}/auth/refresh' -H 'Content-Type: application/json' -d '{\"refreshToken\": \"{{refreshToken}}\"}'"
+url: "{{baseUrl}}/auth/refresh"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: '{"refreshToken": "{{refreshToken}}"}'
+order: 2000

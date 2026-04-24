@@ -1,13 +1,9 @@
 $kind: http-request
-name: Refresh Token
+url: "{{baseUrl}}/auth/refresh"
 method: POST
-url: '{{baseUrl}}/auth/refresh'
-order: 2000
 headers:
-  - key: Content-Type
-    value: application/json
-  - key: Authorization
-    value: 'Bearer {{accessToken}}'
+  Content-Type: application/json
+  Authorization: Bearer {{accessToken}}
 body:
   type: json
   content: |-
@@ -17,9 +13,10 @@ body:
     }
 scripts:
   - type: afterResponse
-    language: text/javascript
     code: |-
       const response = pm.response.json();
       if (response.accessToken) {
         pm.collectionVariables.set("accessToken", response.accessToken);
       }
+    language: text/javascript
+order: 2000

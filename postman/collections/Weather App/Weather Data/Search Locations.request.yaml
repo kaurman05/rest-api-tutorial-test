@@ -1,0 +1,9 @@
+$kind: http-request
+description: "Generated from cURL: curl -X GET '{{baseUrl}}/locations/search?query=' -H 'Authorization: Bearer {{accessToken}}'"
+url: "{{baseUrl}}/locations/search?query="
+method: GET
+headers:
+  Authorization: Bearer {{accessToken}}
+queryParams:
+  query: ""
+order: 5000

@@ -1,4 +1,3 @@
 $kind: collection
-name: Users
-description: 'User management endpoints for CRUD operations. Includes creating users (no auth required), listing users (PAID_USER permission), getting user details, updating user information, and deleting users (ADMIN permission).'
+description: User management endpoints for CRUD operations. Includes creating users (no auth required), listing users (PAID_USER permission), getting user details, updating user information, and deleting users (ADMIN permission).
 order: 2000

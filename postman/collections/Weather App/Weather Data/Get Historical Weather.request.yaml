@@ -1,0 +1,10 @@
+$kind: http-request
+description: "Generated from cURL: curl -X GET '{{baseUrl}}/weather/history?city=&date=' -H 'Authorization: Bearer {{accessToken}}'"
+url: "{{baseUrl}}/weather/history?city=&date="
+method: GET
+headers:
+  Authorization: Bearer {{accessToken}}
+queryParams:
+  city: ""
+  date: ""
+order: 4000

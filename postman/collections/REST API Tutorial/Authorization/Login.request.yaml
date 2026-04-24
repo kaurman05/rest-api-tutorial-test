@@ -1,11 +1,8 @@
 $kind: http-request
-name: Login
+url: "{{baseUrl}}/auth"
 method: POST
-url: '{{baseUrl}}/auth'
-order: 1000
 headers:
-  - key: Content-Type
-    value: application/json
+  Content-Type: application/json
 body:
   type: json
   content: |-
@@ -16,7 +13,6 @@ body:
     }
 scripts:
   - type: afterResponse
-    language: text/javascript
     code: |-
       const response = pm.response.json();
       if (response.accessToken) {
@@ -25,3 +21,5 @@ scripts:
       if (response.refreshToken) {
         pm.collectionVariables.set("refreshToken", response.refreshToken);
       }
+    language: text/javascript
+order: 1000

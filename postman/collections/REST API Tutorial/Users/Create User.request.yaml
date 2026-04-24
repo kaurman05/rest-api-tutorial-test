@@ -1,11 +1,8 @@
 $kind: http-request
-name: Create User
+url: "{{baseUrl}}/users"
 method: POST
-url: '{{baseUrl}}/users'
-order: 1000
 headers:
-  - key: Content-Type
-    value: application/json
+  Content-Type: application/json
 body:
   type: json
   content: |-
@@ -17,9 +14,10 @@ body:
     }
 scripts:
   - type: afterResponse
-    language: text/javascript
     code: |-
       const response = pm.response.json();
       if (response.id) {
         pm.collectionVariables.set("userId", response.id);
       }
+    language: text/javascript
+order: 1000

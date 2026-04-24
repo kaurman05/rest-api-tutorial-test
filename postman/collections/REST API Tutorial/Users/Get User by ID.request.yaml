@@ -1,11 +1,8 @@
 $kind: http-request
-name: Get User by ID
+url: "{{baseUrl}}/users/:userId"
 method: GET
-url: '{{baseUrl}}/users/:userId'
-order: 3000
-pathVariables:
-  - key: userId
-    value: '{{userId}}'
 headers:
-  - key: Authorization
-    value: 'Bearer {{accessToken}}'
+  Authorization: Bearer {{accessToken}}
+pathVariables:
+  userId: "{{userId}}"
+order: 3000
